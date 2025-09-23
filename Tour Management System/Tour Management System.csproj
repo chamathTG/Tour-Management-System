@@ -73,6 +73,9 @@
     <Compile Include="user controls\LoginInterface.xaml.cs">
       <DependentUpon>LoginInterface.xaml</DependentUpon>
     </Compile>
+    <Compile Include="user controls\RegisterInterface.xaml.cs">
+      <DependentUpon>RegisterInterface.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -108,6 +111,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="user controls\LoginInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="user controls\RegisterInterface.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

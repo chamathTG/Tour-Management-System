@@ -6,14 +6,18 @@ namespace Tour_Management_System.user_controls
 {
     public partial class LoginInterface : UserControl
     {
-        public LoginInterface()
+        private Login _mainWindow;
+
+        public LoginInterface(Login mainWindow)
         {
             InitializeComponent();
+
+            _mainWindow = mainWindow;
         }
 
         private void BttnRegister_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            
+            _mainWindow.SwitchUserControl(new RegisterInterface(_mainWindow));
         }
     }
 }

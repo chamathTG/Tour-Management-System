@@ -5,9 +5,13 @@ namespace Tour_Management_System.user_controls
 {
     public partial class RegisterInterface : UserControl
     {
-        public RegisterInterface()
+        private Login _mainWindow;
+        
+        public RegisterInterface(Login mainWindow)
         {
             InitializeComponent();
+
+            _mainWindow = mainWindow;
         }
     }
 }

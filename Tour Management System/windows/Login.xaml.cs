@@ -10,7 +10,7 @@ namespace Tour_Management_System.windows
         {
             InitializeComponent();
 
-            GridLogin.Children.Add(new LoginInterface());
+            GridLogin.Children.Add(new LoginInterface(this));
         }
 
         public void SwitchUserControl(UserControl newControl)
