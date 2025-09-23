@@ -1,0 +1,259 @@
+﻿<UserControl x:Class="Tour_Management_System.user_controls.LoginInterface"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tour_Management_System.user_controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="670"
+             d:DesignWidth="500"
+             Background="#f2f2f2">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <!--Texts-->
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="25"/>
+
+            </Grid.RowDefinitions>
+
+            <!--Company Name-->
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <TextBlock Text="Book"
+                           FontSize="37"
+                           FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                <TextBlock Text="Tour"
+                           FontSize="37"
+                           Foreground="#008fb3"
+                           FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                <TextBlock Text=".Com"
+                           FontSize="37"
+                           Foreground="SkyBlue"
+                           FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+            </StackPanel>
+
+            <!--Note-->
+            <TextBlock Grid.Row="1"
+                       Text="Adventure begins here - Let us guide your journey."
+                       FontSize="14"
+                       FontFamily="pack://application:,,,/assets/fonts/#Libre Baskerville"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+
+        </Grid>
+
+        <!--Username Box-->
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="275"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="1"
+                     FontSize="15"
+                     Padding="10"
+                     Width="270"
+                     Height="45"
+                     Foreground="Black"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     materialDesign:HintAssist.Hint="Username"
+                     materialDesign:HintAssist.FontFamily="Consolas"
+                     materialDesign:HintAssist.Foreground="Black"
+                     materialDesign:TextFieldAssist.HasClearButton="True"
+                     materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+
+        </Grid>
+
+        <!--Password Box-->
+        <Grid Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="275"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <PasswordBox Grid.Column="1"
+                         FontSize="15"
+                         Padding="10"
+                         Width="270"
+                         Height="45"
+                         Foreground="Black"
+                         Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
+                         materialDesign:HintAssist.Hint="Password"
+                         materialDesign:HintAssist.FontFamily="Consolas"
+                         materialDesign:HintAssist.Foreground="Black"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+
+        </Grid>
+
+        <!--Login Button-->
+        <Grid Grid.Row="4">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1"
+                    Height="40">
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text="LOGIN  |  "
+                               FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                    <materialDesign:PackIcon Kind="AirplaneTakeoff"
+                                             VerticalAlignment="Center"/>
+
+                </StackPanel>
+
+            </Button>
+
+        </Grid>
+
+        <!--Reset Password-->
+        <Grid Grid.Row="5">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="174"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1"
+                       Text="Forgot Password? -"
+                       FontSize="13.2"
+                       FontFamily="Consolas"
+                       VerticalAlignment="Center"/>
+
+            <TextBlock Grid.Column="1"
+                       Text="Reset"
+                       FontSize="13"
+                       FontFamily="Consolas"
+                       Padding="138"
+                       VerticalAlignment="Center"
+                       Cursor="Hand">
+
+                <TextBlock.Style>
+
+                    <Style TargetType="TextBlock">
+
+                        <Setter Property="Foreground"
+                                Value="#4dd2ff"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+
+                                <Setter Property="Foreground"
+                                        Value="#00ace6"/>
+
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </TextBlock.Style>
+
+            </TextBlock>
+
+        </Grid>
+
+        <!--Register New User-->
+        <Grid Grid.Row="6">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="167"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1"
+                       Text="New To Here? -"
+                       FontSize="13.2"
+                       FontFamily="Consolas"
+                       VerticalAlignment="Center"/>
+
+            <TextBlock Grid.Column="1"
+                       x:Name="BttnRegister"
+                       Text="Register"
+                       FontSize="13"
+                       FontFamily="Consolas"
+                       Padding="109"
+                       VerticalAlignment="Center"
+                       Cursor="Hand"
+                       MouseLeftButtonDown="BttnRegister_MouseLeftButtonDown">
+
+                <TextBlock.Style>
+
+                    <Style TargetType="TextBlock">
+
+                        <Setter Property="Foreground"
+                                Value="#4dd2ff"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+
+                                <Setter Property="Foreground"
+                                        Value="#00ace6"/>
+
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </TextBlock.Style>
+
+            </TextBlock>
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>
