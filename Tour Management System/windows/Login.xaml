@@ -45,7 +45,7 @@
 
                 </Grid.ColumnDefinitions>
 
-                <!--"Login" Text-->
+                <!--Text-->
                 <TextBlock Grid.Column="1"
                            Text="Login"
                            FontSize="12"
@@ -178,6 +178,48 @@
                            Source="/assets/images/baloons.jpg"
                            Stretch="UniformToFill"
                            VerticalAlignment="Center"/>
+
+                    <!--Loading Icon-->
+                    <Grid Grid.Row="2">
+
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="40"/>
+
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="1">
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="40"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <materialDesign:Card Grid.Column="1"
+                                                 Width="50"
+                                                 Height="50"
+                                                 UniformCornerRadius="25"
+                                                 Background="White"
+                                                 materialDesign:ElevationAssist.Elevation="Dp16">
+
+                                <ProgressBar Grid.Column="1"
+                                             IsEnabled="False"
+                                             Value="50"
+                                             Width="30"
+                                             Height="30"
+                                             IsIndeterminate="True"
+                                             Style="{StaticResource MaterialDesignCircularProgressBar}"/>
+
+                            </materialDesign:Card>
+
+                        </Grid>
+                        
+                    </Grid>
 
                 </Grid>
 
