@@ -13,5 +13,10 @@ namespace Tour_Management_System.user_controls
 
             _mainWindow = mainWindow;
         }
+
+        private void BttnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            
+        }
     }
 }

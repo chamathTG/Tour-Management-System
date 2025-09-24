@@ -15,7 +15,7 @@
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="35"/>
+            <RowDefinition/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="25"/>
@@ -25,8 +25,8 @@
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="150"/>
-            <RowDefinition/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
@@ -225,6 +225,65 @@
                                              VerticalAlignment="Center"/>
 
                 </StackPanel>
+
+            </Button>
+
+        </Grid>
+        
+        <!--Cancel Button-->
+        <Grid Grid.Row="11">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BttnCancel"
+                    Grid.Column="1"
+                    Width="150"
+                    Height="40"
+                    BorderThickness="0"
+                    Foreground="White"
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Click="BttnCancel_Click">
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text="Cancel  |  "
+                               FontSize="15"
+                               FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"
+                               />
+
+                    <materialDesign:PackIcon Kind="Close"
+                                             Width="20"
+                                             Height="20"
+                                             VerticalAlignment="Center"/>
+
+                </StackPanel>
+
+                <Button.Style>
+
+                    <Style TargetType="Button"
+                           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+
+                        <Setter Property="Background" Value="#808080"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background" Value="#ff1a1a"/>
+
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
 
             </Button>
 
