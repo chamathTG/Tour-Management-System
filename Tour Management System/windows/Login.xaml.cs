@@ -10,13 +10,13 @@ namespace Tour_Management_System.windows
         {
             InitializeComponent();
 
-            GridLogin.Children.Add(new LoginInterface(this));
+            GridLoginWindowLeft.Children.Add(new LoginInterface(this));
         }
 
         public void SwitchUserControl(UserControl newControl)
         {
-            GridLogin.Children.Clear();
-            GridRegister.Children.Add(newControl);
+            GridLoginWindowLeft.Children.Clear();
+            GridLoginWindowLeft.Children.Add(newControl);
         }
 
         private void BttnClose_Click(object sender, RoutedEventArgs e)

@@ -150,18 +150,8 @@
                 </Grid.ColumnDefinitions>
                 
                 <!--Left Column-->
-                <Grid Grid.Column="0">
-
-                    <!--Login-->
-                    <Grid x:Name="GridLogin"/>
-                    
-                    <!--Pass Reset-->
-                    <Grid x:Name="GridPassReset"/>
-
-                    <!--Register-->
-                    <Grid x:Name="GridRegister"/>
-
-                </Grid>
+                <Grid Grid.Column="0"
+                      x:Name="GridLoginWindowLeft"/>
 
                 <!--Right Column-->
                 <Grid Grid.Column="1">
