@@ -164,16 +164,19 @@
 
                     </Grid.RowDefinitions>
 
+                    <!--Image 01-->
                     <Image Grid.Row="0"
                            Source="/assets/images/map.jpg"
                            Stretch="UniformToFill"
                            VerticalAlignment="Center"/>
 
+                    <!--Image 02-->
                     <Image Grid.Row="1"
                            Source="/assets/images/plane.jpg"
                            Stretch="UniformToFill"
                            VerticalAlignment="Center"/>
 
+                    <!--Image 03-->
                     <Image Grid.Row="2"
                            Source="/assets/images/baloons.jpg"
                            Stretch="UniformToFill"
@@ -201,18 +204,19 @@
                             </Grid.ColumnDefinitions>
 
                             <materialDesign:Card Grid.Column="1"
+                                                 x:Name="SpinLoadingCard"
                                                  Width="50"
                                                  Height="50"
-                                                 UniformCornerRadius="25"
+                                                 Visibility="Collapsed"
                                                  Background="White"
+                                                 UniformCornerRadius="25"
                                                  materialDesign:ElevationAssist.Elevation="Dp16">
 
                                 <ProgressBar Grid.Column="1"
-                                             IsEnabled="False"
+                                             IsIndeterminate="True"
                                              Value="50"
                                              Width="30"
                                              Height="30"
-                                             IsIndeterminate="True"
                                              Style="{StaticResource MaterialDesignCircularProgressBar}"/>
 
                             </materialDesign:Card>

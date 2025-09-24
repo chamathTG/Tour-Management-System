@@ -310,7 +310,7 @@
             <Button x:Name="BttnCancel"
                     Grid.Column="1"
                     Foreground="White"
-                    Background="#999999"
+                    Background="#737373"
                     Width="150"
                     Height="40"
                     BorderThickness="0"

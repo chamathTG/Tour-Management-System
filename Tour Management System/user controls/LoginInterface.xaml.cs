@@ -17,6 +17,7 @@ namespace Tour_Management_System.user_controls
 
         private void BttnRegister_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            
             _mainWindow.SwitchUserControl(new RegisterInterface(_mainWindow));
         }
     }
