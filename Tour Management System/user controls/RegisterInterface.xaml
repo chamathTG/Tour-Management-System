@@ -24,8 +24,13 @@
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
+            <RowDefinition Height="5"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto "/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
 
@@ -85,78 +90,102 @@
 
         <!--Name-->
         <TextBox Grid.Row="4"
-                 FontFamily="Consolas"
+                 FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
-                 Height="25"
-                 Padding="3,0,0,0"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Height="35"
+                 Padding="7,0,7,0"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Name"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
         <!--Username-->
         <TextBox Grid.Row="5"
-                 FontFamily="Consolas"
+                 FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
-                 Height="25"
-                 Padding="3,0,0,0"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Height="35"
+                 Padding="7,0,7,0"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Username"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
         <!--Email-->
         <TextBox Grid.Row="6"
-                 FontFamily="Consolas"
+                 FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
-                 Height="25"
-                 Padding="3,0,0,0"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Height="35"
+                 Padding="7,0,7,0"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="E-Mail"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
         <!--Contact Number-->
         <TextBox Grid.Row="7"
-                 FontFamily="Consolas"
+                 FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
-                 Height="25"
-                 Padding="3,0,0,0"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Height="35"
+                 Padding="7,0,7,0"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Contact Number"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
-        <!--Password-->
         <Grid Grid.Row="8">
 
             <Grid.ColumnDefinitions>
 
                 <ColumnDefinition Width="46"/>
                 <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition/>
 
             </Grid.ColumnDefinitions>
 
+            <!--Password-->
             <PasswordBox Grid.Column="1"
-                         FontFamily="Consolas"
+                         x:Name="PbPassword"
+                         FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Width="200"
-                         Height="25"
-                         Padding="3,0,0,0"
-                         Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}"
+                         Height="35"
+                         Padding="7,0,7,0"
+                         Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
                          materialDesign:HintAssist.Hint="Password"
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
-                         materialDesign:TextFieldAssist.ClearButtonSize="18"/>
+                         materialDesign:TextFieldAssist.ClearButtonSize="18"
+                         GotFocus="PbPassword_GotFocus"
+                         LostFocus="PbPassword_LostFocus">
+
+            </PasswordBox>
+            
+            <!--Reset Pin-->
+            <PasswordBox Grid.Column="3"
+                         FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
+                         Width="190"
+                         Height="35"
+                         Padding="7,0,7,0"
+                         ToolTip="The pin you enter here needs when you want to reset your password."
+                         Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
+                         materialDesign:HintAssist.Hint="Reset Pin"
+                         materialDesign:HintAssist.Foreground="Black"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:TextFieldAssist.ClearButtonSize="18">
+
+            </PasswordBox>
 
         </Grid>
 
         <!--Password Rules-->
-        <Grid Grid.Row="9">
+        <Grid Grid.Row="10"
+              x:Name="GridPassRules"
+              Visibility="Collapsed">
 
             <Grid.ColumnDefinitions>
 
@@ -177,29 +206,49 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0"
-                       Text="* Symbols cant be included."
-                       FontSize="11"
-                       FontFamily="Consolas"
-                       VerticalAlignment="Bottom"/>
+                           Text="* Symbols cant be included."
+                           FontSize="12"
+                           Foreground="#a6a6a6"
+                           FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
+                           VerticalAlignment="Bottom"/>
 
                 <TextBlock Grid.Row="1"
-                       Text="* Length should be five characters."
-                       FontSize="11"
-                       FontFamily="Consolas"
-                       VerticalAlignment="Center"/>
+                           Text="* Length should be five characters."
+                           FontSize="12"
+                           Foreground="#a6a6a6"
+                           FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
+                           VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Row="2"
-                       Text="* Minimum one number should be included."
-                       FontSize="11"
-                       FontFamily="Consolas"
-                       VerticalAlignment="Center"/>
+                           Text="* At least one number should be included."
+                           FontSize="12"
+                           Foreground="#a6a6a6"
+                           FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
+                           VerticalAlignment="Center"/>
 
             </Grid>
 
         </Grid>
+
+        <!--Terms And Conditions-->
+        <Grid Grid.Row="12">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Column="1"
+                      Content="Accept terms and conditions!"
+                      FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"/>
+
+        </Grid>
         
         <!--Register Button-->
-        <Grid Grid.Row="10">
+        <Grid Grid.Row="14">
 
             <Grid.ColumnDefinitions>
 
@@ -211,17 +260,21 @@
 
             <Button Grid.Column="1"
                     Width="300"
-                    Height="40">
+                    Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="20"
+                    materialDesign:ElevationAssist.Elevation="Dp0">
 
                 <StackPanel Orientation="Horizontal">
 
                     <TextBlock Text="Register  |  "
                                FontSize="15"
+                               Foreground="#333333"
                                FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
                     <materialDesign:PackIcon Kind="AccountAdd"
                                              Width="18"
                                              Height="18"
+                                             Foreground="#333333"
                                              VerticalAlignment="Center"/>
 
                 </StackPanel>
@@ -231,7 +284,7 @@
         </Grid>
         
         <!--Cancel Button-->
-        <Grid Grid.Row="11">
+        <Grid Grid.Row="16">
 
             <Grid.ColumnDefinitions>
 
@@ -243,10 +296,11 @@
 
             <Button x:Name="BttnCancel"
                     Grid.Column="1"
+                    Foreground="White"
                     Width="150"
                     Height="40"
                     BorderThickness="0"
-                    Foreground="White"
+                    materialDesign:ButtonAssist.CornerRadius="20"
                     materialDesign:ElevationAssist.Elevation="Dp0"
                     Click="BttnCancel_Click">
 
@@ -254,8 +308,7 @@
 
                     <TextBlock Text="Cancel  |  "
                                FontSize="15"
-                               FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"
-                               />
+                               FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
                     <materialDesign:PackIcon Kind="Close"
                                              Width="20"
@@ -269,13 +322,13 @@
                     <Style TargetType="Button"
                            BasedOn="{StaticResource MaterialDesignRaisedButton}">
 
-                        <Setter Property="Background" Value="#808080"/>
+                        <Setter Property="Background" Value="#ff4d4d"/>
 
                         <Style.Triggers>
 
                             <Trigger Property="IsMouseOver" Value="True">
 
-                                <Setter Property="Background" Value="#ff1a1a"/>
+                                <Setter Property="Background" Value="#ff3333"/>
 
                             </Trigger>
 

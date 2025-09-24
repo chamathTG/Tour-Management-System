@@ -18,5 +18,15 @@ namespace Tour_Management_System.user_controls
         {
             _mainWindow.SwitchUserControl(new LoginInterface(_mainWindow));
         }
+
+        private void PbPassword_GotFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            GridPassRules.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void PbPassword_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            GridPassRules.Visibility = System.Windows.Visibility.Collapsed;
+        }
     }
 }

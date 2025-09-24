@@ -16,7 +16,7 @@
         <Grid.RowDefinitions>
 
             <RowDefinition/>
-            <RowDefinition Height="90"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="55"/>
             <RowDefinition Height="55"/>
             <RowDefinition Height="65"/>
@@ -81,13 +81,13 @@
 
             <TextBox Grid.Column="1"
                      FontSize="15"
+                     FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                      Padding="10"
                      Width="270"
                      Height="45"
                      Foreground="Black"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                      materialDesign:HintAssist.Hint="Username"
-                     materialDesign:HintAssist.FontFamily="Consolas"
                      materialDesign:HintAssist.Foreground="Black"
                      materialDesign:TextFieldAssist.HasClearButton="True"
                      materialDesign:TextFieldAssist.ClearButtonSize="19"/>
@@ -107,13 +107,13 @@
 
             <PasswordBox Grid.Column="1"
                          FontSize="15"
+                         FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Padding="10"
                          Width="270"
                          Height="45"
                          Foreground="Black"
                          Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
                          materialDesign:HintAssist.Hint="Password"
-                         materialDesign:HintAssist.FontFamily="Consolas"
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
                          materialDesign:TextFieldAssist.ClearButtonSize="19"/>
@@ -132,17 +132,20 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="1"
-                    Height="40">
+                    Height="40"
+                    materialDesign:ElevationAssist.Elevation="Dp0">
 
                 <StackPanel Orientation="Horizontal">
 
                     <TextBlock Text="LOGIN  |  "
                                FontSize="15"
+                               Foreground="#333333"
                                FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
                     <materialDesign:PackIcon Kind="AirplaneTakeoff"
                                              Width="18"
                                              Height="18"
+                                             Foreground="#333333"
                                              VerticalAlignment="Center"/>
 
                 </StackPanel>
@@ -163,16 +166,16 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="1"
-                       Text="Forgot Password? -"
+                       Text="Forgot Password?  -"
                        FontSize="13.2"
-                       FontFamily="Consolas"
+                       FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                        VerticalAlignment="Center"/>
 
             <TextBlock Grid.Column="1"
                        Text="Reset"
                        FontSize="13"
-                       FontFamily="Consolas"
-                       Padding="138"
+                       FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
+                       Padding="126"
                        VerticalAlignment="Center"
                        Cursor="Hand">
 
@@ -215,17 +218,17 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="1"
-                       Text="New To Here? -"
+                       Text="New To Here?  -"
                        FontSize="13.2"
-                       FontFamily="Consolas"
+                       FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                        VerticalAlignment="Center"/>
 
             <TextBlock Grid.Column="1"
                        x:Name="BttnRegister"
                        Text="Register"
                        FontSize="13"
-                       FontFamily="Consolas"
-                       Padding="109"
+                       FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
+                       Padding="100"
                        VerticalAlignment="Center"
                        Cursor="Hand"
                        MouseLeftButtonDown="BttnRegister_MouseLeftButtonDown">
