@@ -15,15 +15,16 @@
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="45"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="27"/>
-            <RowDefinition Height="55"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition/>
             <RowDefinition/>
 
@@ -35,7 +36,7 @@
             <Grid.ColumnDefinitions>
 
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="244"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition/>
 
             </Grid.ColumnDefinitions>
@@ -69,7 +70,7 @@
             <Grid.ColumnDefinitions>
 
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="58"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition/>
 
             </Grid.ColumnDefinitions>
@@ -82,74 +83,68 @@
         </Grid>
 
         <!--Name-->
-        <TextBox Grid.Row="3"
-                 FontFamily="Consolas"
-                 Foreground="Black"
-                 Width="400"
-                 Height="25"
-                 Padding="3,0,0,0"
-                 VerticalAlignment="Bottom"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 materialDesign:HintAssist.Hint="Name"
-                 materialDesign:HintAssist.Foreground="Black"
-                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
-
-        <!--Username-->
         <TextBox Grid.Row="4"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
                  Height="25"
                  Padding="3,0,0,0"
-                 VerticalAlignment="Center"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 materialDesign:HintAssist.Hint="Username"
+                 materialDesign:HintAssist.Hint="Name"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
-        <!--Email-->
+        <!--Username-->
         <TextBox Grid.Row="5"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
                  Height="25"
                  Padding="3,0,0,0"
-                 VerticalAlignment="Center"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 materialDesign:HintAssist.Hint="E-Mail"
+                 materialDesign:HintAssist.Hint="Username"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
-        <!--Contact Number-->
+        <!--Email-->
         <TextBox Grid.Row="6"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
                  Height="25"
                  Padding="3,0,0,0"
-                 VerticalAlignment="Center"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 materialDesign:HintAssist.Hint="E-Mail"
+                 materialDesign:HintAssist.Foreground="Black"
+                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
+
+        <!--Contact Number-->
+        <TextBox Grid.Row="7"
+                 FontFamily="Consolas"
+                 Foreground="Black"
+                 Width="400"
+                 Height="25"
+                 Padding="3,0,0,0"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                  materialDesign:HintAssist.Hint="Contact Number"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
         <!--Password-->
-        <Grid Grid.Row="7">
+        <Grid Grid.Row="8">
 
             <Grid.ColumnDefinitions>
 
                 <ColumnDefinition Width="46"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="50"/>
 
             </Grid.ColumnDefinitions>
 
             <PasswordBox Grid.Column="1"
                          FontFamily="Consolas"
-                         Width="198"
+                         Width="200"
                          Height="25"
-                         HorizontalAlignment="Left"
                          Padding="3,0,0,0"
                          Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}"
                          materialDesign:HintAssist.Hint="Password"
@@ -160,37 +155,45 @@
         </Grid>
 
         <!--Password Rules-->
-        <Grid Grid.Row="8">
+        <Grid Grid.Row="9">
 
-            <Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
 
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
 
-            </Grid.RowDefinitions>
+            </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0"
-                       Text="* A symbol should be included."
-                       FontSize="10"
+            <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                       Text="* Symbols cant be included."
+                       FontSize="11"
                        FontFamily="Consolas"
-                       VerticalAlignment="Bottom"
-                       Margin="50,0,0,0"/>
+                       VerticalAlignment="Bottom"/>
 
-            <TextBlock Grid.Row="1"
-                       Text="* A number should be included."
-                       FontSize="10"
-                       FontFamily="Consolas"
-                       VerticalAlignment="Center"
-                       Margin="50,0,0,0"/>
-
-            <TextBlock Grid.Row="2"
+                <TextBlock Grid.Row="1"
                        Text="* Length should be five characters."
-                       FontSize="10"
+                       FontSize="11"
                        FontFamily="Consolas"
-                       VerticalAlignment="Center"
-                       Margin="50,0,0,0"/>
+                       VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="2"
+                       Text="* Minimum one number should be included."
+                       FontSize="11"
+                       FontFamily="Consolas"
+                       VerticalAlignment="Center"/>
+
+            </Grid>
 
         </Grid>
 
