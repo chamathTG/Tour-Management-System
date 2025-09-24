@@ -137,9 +137,12 @@
                 <StackPanel Orientation="Horizontal">
 
                     <TextBlock Text="LOGIN  |  "
+                               FontSize="15"
                                FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
                     <materialDesign:PackIcon Kind="AirplaneTakeoff"
+                                             Width="18"
+                                             Height="18"
                                              VerticalAlignment="Center"/>
 
                 </StackPanel>
