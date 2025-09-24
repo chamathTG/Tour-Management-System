@@ -82,17 +82,7 @@
         </Grid>
 
         <!--Name-->
-        <Grid Grid.Row="3">
-
-            <Grid.ColumnDefinitions>
-
-                <ColumnDefinition/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition/>
-
-            </Grid.ColumnDefinitions>
-
-            <TextBox Grid.Column="1"
+        <TextBox Grid.Row="3"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
@@ -104,20 +94,8 @@
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
-        </Grid>
-
         <!--Username-->
-        <Grid Grid.Row="4">
-
-            <Grid.ColumnDefinitions>
-
-                <ColumnDefinition/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition/>
-
-            </Grid.ColumnDefinitions>
-
-            <TextBox Grid.Column="1"
+        <TextBox Grid.Row="4"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
@@ -129,20 +107,8 @@
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
-        </Grid>
-
         <!--Email-->
-        <Grid Grid.Row="5">
-
-            <Grid.ColumnDefinitions>
-
-                <ColumnDefinition/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition/>
-
-            </Grid.ColumnDefinitions>
-
-            <TextBox Grid.Column="1"
+        <TextBox Grid.Row="5"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
@@ -154,20 +120,8 @@
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
-        </Grid>
-
         <!--Contact Number-->
-        <Grid Grid.Row="6">
-
-            <Grid.ColumnDefinitions>
-
-                <ColumnDefinition/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition/>
-
-            </Grid.ColumnDefinitions>
-
-            <TextBox Grid.Column="1"
+        <TextBox Grid.Row="6"
                  FontFamily="Consolas"
                  Foreground="Black"
                  Width="400"
@@ -178,8 +132,6 @@
                  materialDesign:HintAssist.Hint="Contact Number"
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
-
-        </Grid>
 
         <!--Password-->
         <Grid Grid.Row="7">
