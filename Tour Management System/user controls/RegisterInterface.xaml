@@ -26,11 +26,11 @@
             <RowDefinition Height="45"/>
             <RowDefinition Height="5"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="12"/>
             <RowDefinition Height="auto "/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="15"/>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
 
@@ -136,6 +136,7 @@
                  materialDesign:HintAssist.Foreground="Black"
                  materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
 
+        <!--Password and Reset Pin-->
         <Grid Grid.Row="8">
 
             <Grid.ColumnDefinitions>
@@ -300,20 +301,19 @@
                     Width="150"
                     Height="40"
                     BorderThickness="0"
-                    materialDesign:ButtonAssist.CornerRadius="20"
                     materialDesign:ElevationAssist.Elevation="Dp0"
                     Click="BttnCancel_Click">
 
                 <StackPanel Orientation="Horizontal">
 
-                    <TextBlock Text="Cancel  |  "
-                               FontSize="15"
-                               FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
-
-                    <materialDesign:PackIcon Kind="Close"
+                    <materialDesign:PackIcon Kind="ArrowLeft"
                                              Width="20"
                                              Height="20"
                                              VerticalAlignment="Center"/>
+
+                    <TextBlock Text="  |  Cancel"
+                               FontSize="15"
+                               FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
                 </StackPanel>
 
@@ -322,13 +322,13 @@
                     <Style TargetType="Button"
                            BasedOn="{StaticResource MaterialDesignRaisedButton}">
 
-                        <Setter Property="Background" Value="#ff4d4d"/>
+                        <Setter Property="Background" Value="#b3b3b3"/>
 
                         <Style.Triggers>
 
                             <Trigger Property="IsMouseOver" Value="True">
 
-                                <Setter Property="Background" Value="#ff3333"/>
+                                <Setter Property="Background" Value="#999999"/>
 
                             </Trigger>
 
