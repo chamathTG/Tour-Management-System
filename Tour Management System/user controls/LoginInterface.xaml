@@ -172,12 +172,14 @@
                        VerticalAlignment="Center"/>
 
             <TextBlock Grid.Column="1"
+                       x:Name="BttnReset"
                        Text="Reset"
                        FontSize="13"
                        FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                        Padding="126"
                        VerticalAlignment="Center"
-                       Cursor="Hand">
+                       Cursor="Hand"
+                       MouseLeftButtonDown="BttnReset_MouseLeftButtonDown">
 
                 <TextBlock.Style>
 

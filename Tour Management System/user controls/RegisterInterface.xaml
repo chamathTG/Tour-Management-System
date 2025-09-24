@@ -48,9 +48,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="1"
-                        Orientation="Horizontal"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left">
+                        Orientation="Horizontal">
 
                 <TextBlock Text="Book"
                            FontSize="37"
