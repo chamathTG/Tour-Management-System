@@ -16,7 +16,7 @@ namespace Tour_Management_System.user_controls
 
         private void BttnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            
+            _mainWindow.SwitchUserControl(new LoginInterface(_mainWindow));
         }
     }
 }
