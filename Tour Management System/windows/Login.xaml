@@ -182,49 +182,6 @@
                            Stretch="UniformToFill"
                            VerticalAlignment="Center"/>
 
-                    <!--Loading Icon-->
-                    <Grid Grid.Row="2">
-
-                        <Grid.RowDefinitions>
-
-                            <RowDefinition/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="40"/>
-
-                        </Grid.RowDefinitions>
-
-                        <Grid Grid.Row="1">
-
-                            <Grid.ColumnDefinitions>
-
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="40"/>
-
-                            </Grid.ColumnDefinitions>
-
-                            <materialDesign:Card Grid.Column="1"
-                                                 x:Name="SpinLoadingCard"
-                                                 Width="50"
-                                                 Height="50"
-                                                 Visibility="Collapsed"
-                                                 Background="White"
-                                                 UniformCornerRadius="25"
-                                                 materialDesign:ElevationAssist.Elevation="Dp16">
-
-                                <ProgressBar Grid.Column="1"
-                                             IsIndeterminate="True"
-                                             Value="50"
-                                             Width="30"
-                                             Height="30"
-                                             Style="{StaticResource MaterialDesignCircularProgressBar}"/>
-
-                            </materialDesign:Card>
-
-                        </Grid>
-                        
-                    </Grid>
-
                 </Grid>
 
             </Grid>

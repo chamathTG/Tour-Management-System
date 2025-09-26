@@ -132,8 +132,10 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="1"
+                    x:Name="BttnLogin"
                     Height="40"
-                    materialDesign:ElevationAssist.Elevation="Dp0">
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Click="BttnLogin_Click">
 
                 <StackPanel Orientation="Horizontal">
 
