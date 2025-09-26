@@ -9,7 +9,6 @@ namespace Tour_Management_System.windows
         public Login()
         {
             InitializeComponent();
-
             GridLoginWindowLeft.Children.Add(new LoginInterface(this));
         }
 

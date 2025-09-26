@@ -13,7 +13,6 @@ namespace Tour_Management_System.user_controls
         public ResetInterface(Login mainWindow)
         {
             InitializeComponent();
-
             _mainWindow = mainWindow;
         }
 

@@ -14,7 +14,6 @@ namespace Tour_Management_System.user_controls
         public RegisterInterface(Login mainWindow)
         {
             InitializeComponent();
-
             _mainWindow = mainWindow;
         }
 
