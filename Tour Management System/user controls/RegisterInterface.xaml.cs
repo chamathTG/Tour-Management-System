@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using Tour_Management_System.windows;
 
 namespace Tour_Management_System.user_controls
@@ -10,6 +11,8 @@ namespace Tour_Management_System.user_controls
     public partial class RegisterInterface : UserControl
     {
         private Login _mainWindow;
+        private readonly Regex checkSymbols = new Regex(@"[.*$#@!&]");
+        private readonly Regex checkNumbers = new Regex(@"[0-9]");
 
         public RegisterInterface(Login mainWindow)
         {
@@ -30,16 +33,6 @@ namespace Tour_Management_System.user_controls
         private void CbTermsCondition_Unchecked(object sender, System.Windows.RoutedEventArgs e)
         {
             BttnRegister.IsEnabled = false;
-        }
-
-        private void PbPassword_GotFocus(object sender, System.Windows.RoutedEventArgs e)
-        {
-            GridPassRules.Visibility = Visibility.Visible;
-        }
-
-        private void PbPassword_LostFocus(object sender, System.Windows.RoutedEventArgs e)
-        {
-            GridPassRules.Visibility = Visibility.Collapsed;
         }
 
         private void BttnRegister_Click(object sender, RoutedEventArgs e)
@@ -162,6 +155,46 @@ namespace Tour_Management_System.user_controls
             if (e.Key == Key.Space)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void PbPassword_GotFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            GridPassRules.Visibility = Visibility.Visible;
+        }
+
+        private void PbPassword_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            GridPassRules.Visibility = Visibility.Collapsed;
+        }
+
+        private void PbPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (checkNumbers.IsMatch(PbPassword.Password))
+            {
+                TbPassRule01.Foreground = (Brush)new BrushConverter().ConvertFrom("#00cc00");
+            }
+            else
+            {
+                TbPassRule01.Foreground = (Brush)new BrushConverter().ConvertFrom("#a6a6a6");
+            }
+
+            if (checkSymbols.IsMatch(PbPassword.Password))
+            {
+                TbPassRule02.Foreground = (Brush)new BrushConverter().ConvertFrom("#00cc00");
+            }
+            else
+            {
+                TbPassRule02.Foreground = (Brush)new BrushConverter().ConvertFrom("#a6a6a6");
+            }
+
+            if (PbPassword.Password.Length >= 5)
+            {
+                TbPassRule03.Foreground = (Brush)new BrushConverter().ConvertFrom("#00cc00");
+            }
+            else
+            {
+                TbPassRule03.Foreground = (Brush)new BrushConverter().ConvertFrom("#a6a6a6");
             }
         }
 

@@ -175,7 +175,8 @@
                          LostFocus="PbPassword_LostFocus"
                          PreviewTextInput="PbPassword_PreviewTextInput"
                          PreviewKeyDown="PbPassword_PreviewKeyDown"
-                         DataObject.Pasting="PbPassword_Pasting"/>
+                         DataObject.Pasting="PbPassword_Pasting"
+                         PasswordChanged="PbPassword_PasswordChanged"/>
 
         </Grid>
 
@@ -233,6 +234,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0"
+                           x:Name="TbPassRule01"
                            Text="* At least one number should be included."
                            FontSize="12"
                            Foreground="#a6a6a6"
@@ -240,6 +242,7 @@
                            VerticalAlignment="Bottom"/>
 
                 <TextBlock Grid.Row="1"
+                           x:Name="TbPassRule02"
                            Text="* At least one Symbols should be included."
                            FontSize="12"
                            Foreground="#a6a6a6"
@@ -247,6 +250,7 @@
                            VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Row="2"
+                           x:Name="TbPassRule03"
                            Text="* Length should be at least five characters."
                            FontSize="12"
                            Foreground="#a6a6a6"
