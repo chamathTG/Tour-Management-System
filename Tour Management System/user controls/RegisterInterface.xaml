@@ -88,6 +88,7 @@
 
         <!--Name-->
         <TextBox Grid.Row="4"
+                 x:Name="TbName"
                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
@@ -96,10 +97,13 @@
                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Name"
                  materialDesign:HintAssist.Foreground="Black"
-                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
+                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"
+                 PreviewTextInput="TbName_PreviewTextInput"
+                 DataObject.Pasting="TbName_Pasting"/>
 
         <!--Username-->
         <TextBox Grid.Row="5"
+                 x:Name="TbUsername"
                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
@@ -108,10 +112,14 @@
                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Username"
                  materialDesign:HintAssist.Foreground="Black"
-                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
+                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"
+                 PreviewTextInput="TbUsername_PreviewTextInput"
+                 PreviewKeyDown="TbUsername_PreviewKeyDown"
+                 DataObject.Pasting="TbUsername_Pasting"/>
 
         <!--Email-->
         <TextBox Grid.Row="6"
+                 x:Name="TbEmail"
                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
@@ -120,10 +128,14 @@
                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="E-Mail"
                  materialDesign:HintAssist.Foreground="Black"
-                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
+                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"
+                 PreviewTextInput="TbEmail_PreviewTextInput"
+                 PreviewKeyDown="TbEmail_PreviewKeyDown"
+                 DataObject.Pasting="TbEmail_Pasting"/>
 
         <!--Contact Number-->
         <TextBox Grid.Row="7"
+                 x:Name="TbContactNumber"
                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                  Foreground="Black"
                  Width="400"
@@ -132,7 +144,10 @@
                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Contact Number"
                  materialDesign:HintAssist.Foreground="Black"
-                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"/>
+                 materialDesign:HintAssist.FloatingHintHorizontalAlignment="Right"
+                 PreviewTextInput="TbContactNumber_PreviewTextInput"
+                 DataObject.Pasting="TbContactNumber_Pasting"
+                 PreviewKeyDown="TbContactNumber_PreviewKeyDown"/>
 
         <!--Password-->
         <Grid Grid.Row="8">
@@ -157,9 +172,10 @@
                          materialDesign:TextFieldAssist.HasClearButton="True"
                          materialDesign:TextFieldAssist.ClearButtonSize="18"
                          GotFocus="PbPassword_GotFocus"
-                         LostFocus="PbPassword_LostFocus">
-
-            </PasswordBox>
+                         LostFocus="PbPassword_LostFocus"
+                         PreviewTextInput="PbPassword_PreviewTextInput"
+                         PreviewKeyDown="PbPassword_PreviewKeyDown"
+                         DataObject.Pasting="PbPassword_Pasting"/>
 
         </Grid>
 
@@ -176,6 +192,7 @@
             </Grid.ColumnDefinitions>
 
             <PasswordBox Grid.Column="1"
+                         x:Name="PbResetPin"
                          FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Width="190"
                          Height="35"
@@ -185,7 +202,10 @@
                          materialDesign:HintAssist.Hint="Reset Pin"
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
-                         materialDesign:TextFieldAssist.ClearButtonSize="18"/>
+                         materialDesign:TextFieldAssist.ClearButtonSize="18"
+                         PreviewTextInput="PbResetPin_PreviewTextInput"
+                         PreviewKeyDown="PbResetPin_PreviewKeyDown"
+                         DataObject.Pasting="PbResetPin_Pasting"/>
 
         </Grid>
 
@@ -213,21 +233,21 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0"
-                           Text="* Symbols cant be included."
+                           Text="* At least one number should be included."
                            FontSize="12"
                            Foreground="#a6a6a6"
                            FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
                            VerticalAlignment="Bottom"/>
 
                 <TextBlock Grid.Row="1"
-                           Text="* Length should be five characters."
+                           Text="* At least one Symbols should be included."
                            FontSize="12"
                            Foreground="#a6a6a6"
                            FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
                            VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Row="2"
-                           Text="* At least one number should be included."
+                           Text="* Length should be at least five characters."
                            FontSize="12"
                            Foreground="#a6a6a6"
                            FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
