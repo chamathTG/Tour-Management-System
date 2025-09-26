@@ -25,16 +25,6 @@ namespace Tour_Management_System.user_controls
             _mainWindow.SwitchUserControl(new LoginInterface(_mainWindow));
         }
 
-        private void CbTermsCondition_Checked(object sender, System.Windows.RoutedEventArgs e)
-        {
-            BttnRegister.IsEnabled = true;
-        }
-
-        private void CbTermsCondition_Unchecked(object sender, System.Windows.RoutedEventArgs e)
-        {
-            BttnRegister.IsEnabled = false;
-        }
-
         private void BttnRegister_Click(object sender, RoutedEventArgs e)
         {
             bool fieldsEmpty = GridRegisterInterface.Children.OfType<Control>().Any
@@ -44,6 +34,16 @@ namespace Tour_Management_System.user_controls
             {
                 MessageBox.Show("Please fill the all the details!");
             }
+        }
+
+        private void CbTermsCondition_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            BttnRegister.IsEnabled = true;
+        }
+
+        private void CbTermsCondition_Unchecked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            BttnRegister.IsEnabled = false;
         }
 
         //Name
