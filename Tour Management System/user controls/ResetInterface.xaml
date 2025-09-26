@@ -23,6 +23,8 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="15"/>
@@ -93,6 +95,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBox Grid.Column="1"
+                     x:Name="TbUsername"
                      FontSize="15"
                      FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                      Padding="10"
@@ -103,7 +106,10 @@
                      materialDesign:HintAssist.Hint="Username"
                      materialDesign:HintAssist.Foreground="Black"
                      materialDesign:TextFieldAssist.HasClearButton="True"
-                     materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                     materialDesign:TextFieldAssist.ClearButtonSize="19"
+                     PreviewTextInput="TbUsername_PreviewTextInput"
+                     DataObject.Pasting="TbUsername_Pasting"
+                     PreviewKeyDown="TbUsername_PreviewKeyDown"/>
 
         </Grid>
 
@@ -119,6 +125,7 @@
             </Grid.ColumnDefinitions>
 
             <PasswordBox Grid.Column="1"
+                         x:Name="PbResetPin"
                          FontSize="15"
                          FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Padding="10"
@@ -129,7 +136,10 @@
                          materialDesign:HintAssist.Hint="Reset Pin"
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
-                         materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                         materialDesign:TextFieldAssist.ClearButtonSize="19"
+                         PreviewTextInput="PbResetPin_PreviewTextInput"
+                         DataObject.Pasting="PbResetPin_Pasting"
+                         PreviewKeyDown="PbResetPin_PreviewKeyDown"/>
 
         </Grid>
 
@@ -145,6 +155,7 @@
             </Grid.ColumnDefinitions>
 
             <PasswordBox Grid.Column="1"
+                         x:Name="PbNewPassword"
                          FontSize="15"
                          FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Padding="10"
@@ -155,12 +166,39 @@
                          materialDesign:HintAssist.Hint="New Password"
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
-                         materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                         materialDesign:TextFieldAssist.ClearButtonSize="19"
+                         PreviewTextInput="PbNewPassword_PreviewTextInput"
+                         DataObject.Pasting="PbNewPassword_Pasting"
+                         PreviewKeyDown="PbNewPassword_PreviewKeyDown"
+                         GotFocus="PbNewPassword_GotFocus"
+                         LostFocus="PbNewPassword_LostFocus"/>
+
+        </Grid>
+        
+        <!--New Password Rule-->
+        <Grid Grid.Row="10"
+              x:Name="GridNewPassRule"
+              Visibility="Collapsed">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1"
+                           Text="* Make sure to set a new Strong password."
+                           FontSize="12"
+                           Foreground="#a6a6a6"
+                           FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
+                           VerticalAlignment="Bottom"/>
 
         </Grid>
 
         <!--Reset Button-->
-        <Grid Grid.Row="10">
+        <Grid Grid.Row="12">
 
             <Grid.ColumnDefinitions>
 
@@ -195,7 +233,7 @@
         </Grid>
 
         <!--Cancel Button-->
-        <Grid Grid.Row="12">
+        <Grid Grid.Row="14">
 
             <Grid.ColumnDefinitions>
 

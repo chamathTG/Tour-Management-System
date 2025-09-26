@@ -22,6 +22,16 @@ namespace Tour_Management_System.user_controls
             _mainWindow.SwitchUserControl(new LoginInterface(_mainWindow));
         }
 
+        private void PbNewPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            GridNewPassRule.Visibility = Visibility.Visible;
+        }
+
+        private void PbNewPassword_LostFocus(object sender, RoutedEventArgs e)
+        {
+            GridNewPassRule.Visibility = Visibility.Collapsed;
+        }
+
         //Username
         private void TbUsername_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
