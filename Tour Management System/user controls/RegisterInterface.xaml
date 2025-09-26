@@ -156,7 +156,8 @@
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
                          materialDesign:TextFieldAssist.ClearButtonSize="18"
-                         Mouse.GotMouseCapture="PbPassword_GotMouseCapture">
+                         GotFocus="PbPassword_GotFocus"
+                         LostFocus="PbPassword_LostFocus">
 
             </PasswordBox>
 

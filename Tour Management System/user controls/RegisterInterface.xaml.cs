@@ -29,9 +29,14 @@ namespace Tour_Management_System.user_controls
             BttnRegister.IsEnabled = false;
         }
 
-        private void PbPassword_GotMouseCapture(object sender, System.Windows.Input.MouseEventArgs e)
+        private void PbPassword_GotFocus(object sender, System.Windows.RoutedEventArgs e)
         {
             GridPassRules.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void PbPassword_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            GridPassRules.Visibility = System.Windows.Visibility.Collapsed;
         }
     }
 }
