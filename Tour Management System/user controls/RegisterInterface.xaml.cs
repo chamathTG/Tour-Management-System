@@ -3,14 +3,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Tour_Management_System.windows;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Tour_Management_System.user_controls
 {
     public partial class RegisterInterface : UserControl
     {
         private Login _mainWindow;
-        
+
         public RegisterInterface(Login mainWindow)
         {
             InitializeComponent();
@@ -69,7 +68,7 @@ namespace Tour_Management_System.user_controls
         {
             string input = e.DataObject.GetData(DataFormats.Text) as string;
 
-            if(!Regex.IsMatch(input, @"^[a-zA-Z0-9]+$"))
+            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9]+$"))
             {
                 e.CancelCommand();
             }
@@ -77,7 +76,7 @@ namespace Tour_Management_System.user_controls
 
         private void TbUsername_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if(e.Key == Key.Space)
+            if (e.Key == Key.Space)
             {
                 e.Handled = true;
             }
