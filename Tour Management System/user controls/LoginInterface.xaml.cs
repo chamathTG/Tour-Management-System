@@ -29,7 +29,15 @@ namespace Tour_Management_System.user_controls
 
         private void BttnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(TbUsername.Text))
+            {
+                MessageBox.Show("Username is Empty!");
+            }
 
+            if (string.IsNullOrWhiteSpace(PbPassword.Password))
+            {
+                MessageBox.Show("Password is Empty!");
+            }
         }
 
         //Username

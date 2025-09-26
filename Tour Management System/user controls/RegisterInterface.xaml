@@ -11,7 +11,7 @@
              d:DesignWidth="500"
              Background="#f2f2f2">
 
-    <Grid>
+    <Grid x:Name="GridRegisterInterface">
 
         <Grid.RowDefinitions>
 
@@ -294,7 +294,8 @@
                     Height="40"
                     IsEnabled="False"
                     materialDesign:ButtonAssist.CornerRadius="20"
-                    materialDesign:ElevationAssist.Elevation="Dp0">
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Click="BttnRegister_Click">
 
                 <StackPanel Orientation="Horizontal">
 

@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -40,6 +41,17 @@ namespace Tour_Management_System.user_controls
         private void PbPassword_LostFocus(object sender, System.Windows.RoutedEventArgs e)
         {
             GridPassRules.Visibility = Visibility.Collapsed;
+        }
+
+        private void BttnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            bool fieldsEmpty = GridRegisterInterface.Children.OfType<Control>().Any
+                (field => (field is TextBox tb && string.IsNullOrWhiteSpace(tb.Text)) || (field is PasswordBox pb && string.IsNullOrWhiteSpace(pb.Password)));
+
+            if (fieldsEmpty)
+            {
+                MessageBox.Show("Please fill the all the details!");
+            }
         }
 
         //Name

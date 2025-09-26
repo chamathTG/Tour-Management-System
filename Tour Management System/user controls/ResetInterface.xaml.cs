@@ -32,6 +32,24 @@ namespace Tour_Management_System.user_controls
             GridNewPassRule.Visibility = Visibility.Collapsed;
         }
 
+        private void BttnReset_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TbUsername.Text))
+            {
+                MessageBox.Show("Username is Empty!");
+            }
+
+            if (string.IsNullOrWhiteSpace(PbResetPin.Password))
+            {
+                MessageBox.Show("Reset Pin is Empty!");
+            }
+
+            if (string.IsNullOrWhiteSpace(PbNewPassword.Password))
+            {
+                MessageBox.Show("Enter your new password!");
+            }
+        }
+
         //Username
         private void TbUsername_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {

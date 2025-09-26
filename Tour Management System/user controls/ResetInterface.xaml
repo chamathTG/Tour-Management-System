@@ -209,9 +209,11 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="1"
+                    x:Name="BttnReset"
                     Height="40"
                     materialDesign:ButtonAssist.CornerRadius="20"
-                    materialDesign:ElevationAssist.Elevation="Dp0">
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Click="BttnReset_Click">
 
                 <StackPanel Orientation="Horizontal">
 
