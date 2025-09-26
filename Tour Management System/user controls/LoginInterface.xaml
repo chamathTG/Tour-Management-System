@@ -80,6 +80,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBox Grid.Column="1"
+                     x:Name="TbUsername"
                      FontSize="15"
                      FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                      Padding="10"
@@ -90,7 +91,10 @@
                      materialDesign:HintAssist.Hint="Username"
                      materialDesign:HintAssist.Foreground="Black"
                      materialDesign:TextFieldAssist.HasClearButton="True"
-                     materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                     materialDesign:TextFieldAssist.ClearButtonSize="19"
+                     PreviewTextInput="TbUsername_PreviewTextInput"
+                     DataObject.Pasting="TbUsername_Pasting"
+                     PreviewKeyDown="TbUsername_PreviewKeyDown"/>
 
         </Grid>
 
@@ -106,6 +110,7 @@
             </Grid.ColumnDefinitions>
 
             <PasswordBox Grid.Column="1"
+                         x:Name="PbPassword"
                          FontSize="15"
                          FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Padding="10"
@@ -116,7 +121,10 @@
                          materialDesign:HintAssist.Hint="Password"
                          materialDesign:HintAssist.Foreground="Black"
                          materialDesign:TextFieldAssist.HasClearButton="True"
-                         materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                         materialDesign:TextFieldAssist.ClearButtonSize="19"
+                         PreviewTextInput="PbPassword_PreviewTextInput"
+                         DataObject.Pasting="PbPassword_Pasting"
+                         PreviewKeyDown="PbPassword_PreviewKeyDown"/>
 
         </Grid>
 

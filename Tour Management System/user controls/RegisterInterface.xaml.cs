@@ -45,7 +45,7 @@ namespace Tour_Management_System.user_controls
         //Name
         private void TbName_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = !Regex.IsMatch(e.Text, @"[a-zA-Z ]+$");
+            e.Handled = !Regex.IsMatch(e.Text, @"[a-zA-Z]+$");
         }
 
         private void TbName_Pasting(object sender, DataObjectPastingEventArgs e)
