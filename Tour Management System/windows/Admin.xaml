@@ -272,6 +272,11 @@
             </Grid>
 
         </Border>
+        
+        <!--Elements-->
+        <Grid Grid.Column="1">
+            
+        </Grid>
 
     </Grid>
     
