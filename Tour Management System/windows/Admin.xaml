@@ -8,149 +8,265 @@
         mc:Ignorable="d"
         
         Title="Tour Manager" 
-        Height="900"
-        Width="1700"
+        Height="850"
+        Width="1400"
+        Background="#f2f2f2"
         WindowStyle="None"
-        ResizeMode="NoResize"
+        AllowsTransparency="True"
         WindowStartupLocation="CenterScreen">
-    
+
     <Grid>
 
-        <Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
 
-            <RowDefinition Height="30"/>
-            <RowDefinition/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
 
-        </Grid.RowDefinitions>
-        
-        <!--Window-->
-        <Grid Grid.Row="0"
-              Background="	#003d4d">
+        </Grid.ColumnDefinitions>
 
-            <Grid.ColumnDefinitions>
+        <!--Menu-->
+        <Border Grid.Column="0"
+                x:Name="BorderMenu"
+                Width="300"
+                BorderThickness="0"
+                Background="#333333"
+                CornerRadius="0,15,15,0">
 
-                <ColumnDefinition Width="3.5"/>
-                <ColumnDefinition Width="145"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="30"/>
+            <Grid>
 
-            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
 
-            <!--Text-->
-            <TextBlock Grid.Column="1"
-                       Text="Admin"
-                       FontSize="12"
-                       FontFamily="Consolas"
-                       Foreground="White"
-                       Padding="6"
-                       VerticalAlignment="Center"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
 
-            <!--Close Button-->
-            <Button Grid.Column="4"
-                    x:Name="BttnClose"
-                    Content="{materialDesign:PackIcon Kind=Close, Size=20}"
-                    ToolTip="Close"
-                    ToolTipService.HorizontalOffset="-20"
-                    Cursor="Hand"
-                    Focusable="False"
-                    Foreground="White"
-                    BorderThickness="0"
-                    Padding="0"
-                    Width="30"
-                    Height="30"
-                    materialDesign:ButtonAssist.CornerRadius="0"
-                    materialDesign:ElevationAssist.Elevation="Dp0">
+                </Grid.RowDefinitions>
 
-                <Button.Style>
+                <!--Users-->
+                <Button Grid.Row="1"
+                        Width="200"
+                        Height="40"
+                        materialDesign:ButtonAssist.CornerRadius="5">
 
-                    <Style TargetType="Button"
-                               BasedOn="{StaticResource MaterialDesignRaisedButton}">
+                    <StackPanel Orientation="Horizontal">
 
-                        <Setter Property="Background" Value="#ff4d4d"/>
+                        <materialDesign:PackIcon Kind="AccountGroup"
+                                                 Width="21"
+                                                 Height="21"
+                                                 Foreground="#333333"
+                                                 VerticalAlignment="Center"/>
 
-                        <Style.Triggers>
+                        <TextBlock Text="  |  Users"
+                                   FontSize="17"
+                                   Foreground="#333333"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
-                            <Trigger Property="IsMouseOver" Value="True">
+                    </StackPanel>
 
-                                <Setter Property="Background" Value="#ff1a1a"/>
+                </Button>
 
-                            </Trigger>
+                <!--credentials-->
+                <Button Grid.Row="3"
+                        Width="200"
+                        Height="40"
+                        materialDesign:ButtonAssist.CornerRadius="5">
 
-                        </Style.Triggers>
+                    <StackPanel Orientation="Horizontal">
 
-                    </Style>
+                        <materialDesign:PackIcon Kind="KeyChain"
+                                                 Width="21"
+                                                 Height="21"
+                                                 Foreground="#333333"
+                                                 VerticalAlignment="Center"/>
 
-                </Button.Style>
+                        <TextBlock Text="  |  Credentials"
+                                   FontSize="17"
+                                   Foreground="#333333"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
-            </Button>
+                    </StackPanel>
 
-            <!--Minimize Button-->
-            <Button Grid.Column="3"
-                    x:Name="BttnMinimize"
-                    Content="{materialDesign:PackIcon Kind=Minus, Size=20}"
-                    ToolTip="Minimize"
-                    Cursor="Hand"
-                    Focusable="False"
-                    Foreground="White"
-                    BorderThickness="0"
-                    Padding="0"
-                    Width="30"
-                    Height="30"
-                    materialDesign:ButtonAssist.CornerRadius="0"
-                    materialDesign:ElevationAssist.Elevation="Dp0">
+                </Button>
 
-                <Button.Style>
+                <!--Permissions-->
+                <Button Grid.Row="5"
+                        Width="200"
+                        Height="40"
+                        materialDesign:ButtonAssist.CornerRadius="5">
 
-                    <Style TargetType="Button"
-                               BasedOn="{StaticResource MaterialDesignRaisedButton}">
+                    <StackPanel Orientation="Horizontal">
 
-                        <Setter Property="Background" Value="#666666"/>
+                        <materialDesign:PackIcon Kind="Security"
+                                                 Width="21"
+                                                 Height="21"
+                                                 Foreground="#333333"
+                                                 VerticalAlignment="Center"/>
 
-                        <Style.Triggers>
+                        <TextBlock Text="  |  Permissions"
+                                   FontSize="17"
+                                   Foreground="#333333"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
-                            <Trigger Property="IsMouseOver" Value="True">
+                    </StackPanel>
+                    
+                </Button>
 
-                                <Setter Property="Background" Value="#4c4c4c"/>
+                <!--Database-->
+                <Button Grid.Row="7"
+                        Width="200"
+                        Height="40"
+                        materialDesign:ButtonAssist.CornerRadius="5">
 
-                            </Trigger>
+                    <StackPanel Orientation="Horizontal">
 
-                        </Style.Triggers>
+                        <materialDesign:PackIcon Kind="Database"
+                                                 Width="21"
+                                                 Height="21"
+                                                 Foreground="#333333"
+                                                 VerticalAlignment="Center"/>
 
-                    </Style>
+                        <TextBlock Text="  |  Database"
+                                   FontSize="17"
+                                   Foreground="#333333"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
-                </Button.Style>
+                    </StackPanel>
 
-            </Button>
+                </Button>
 
-        </Grid>
-        
-        <!--Elements-->
-        <Grid Grid.Row="1"
-              Background="#f2f2f2">
+                <!--Settings-->
+                <Button Grid.Row="9"
+                        Width="200"
+                        Height="40"
+                        materialDesign:ButtonAssist.CornerRadius="5">
 
-            <Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
 
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                        <materialDesign:PackIcon Kind="Cog"
+                                                 Width="21"
+                                                 Height="21"
+                                                 Foreground="#333333"
+                                                 VerticalAlignment="Center"/>
 
-            </Grid.ColumnDefinitions>
-            
-            <!--Menu Bar-->
-            <Grid Grid.Column="0">
+                        <TextBlock Text="  |  Settings"
+                                   FontSize="17"
+                                   Foreground="#333333"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                    </StackPanel>
+
+                </Button>
                 
+                <!--User Info-->
+                <Grid Grid.Row="11">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--Icon-->
+                    <materialDesign:PackIcon Grid.Column="1"
+                                             Kind="UserCircle"
+                                             Width="70"
+                                             Height="70"
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             Foreground="White"/>
+
+                    <StackPanel Grid.Column="3"
+                                Orientation="Vertical"
+                                VerticalAlignment="Center">
+
+                        <!--User Level-->
+                        <TextBlock Text="Admin User"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"/>
+
+                        <!--Username-->
+                        <TextBlock Text="@head.admin"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"/>
+
+                        <!--Name-->
+                        <TextBlock Text="Chamath Dasun"
+                                   Foreground="White"
+                                   FontSize="17"
+                                   FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"/>
+
+                    </StackPanel>
+
+                </Grid>
                 
+                <!--Window Control Buttons-->
+                <Grid Grid.Row="13">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--Logout Button-->
+                    <Button Grid.Column="1"
+                            Content="{materialDesign:PackIcon Kind=logout, Size=30}"
+                            BorderThickness="0"
+                            Width="60"
+                            Height="60"
+                            Foreground="White"
+                            Background="Transparent"
+                            ToolTip="Logout to login window"/>
+
+                    <!--Close Button-->
+                    <Button Grid.Column="2"
+                            Content="{materialDesign:PackIcon Kind=power, Size=30}"
+                            BorderThickness="0"
+                            Width="60"
+                            Height="60"
+                            Foreground="White"
+                            Background="Transparent"
+                            ToolTip="Close the software"/>
+
+                    <!--Minimize Button-->
+                    <Button Grid.Column="3"
+                            Content="{materialDesign:PackIcon Kind=Minimize, Size=30}"
+                            BorderThickness="0"
+                            Width="60"
+                            Height="60"
+                            Foreground="White"
+                            Background="Transparent"
+                            ToolTip="Minimize the software"/>
+
+                </Grid>
+                
+
             </Grid>
-            
-            <!--Menu-->
-            <Grid Grid.Column="1">
 
+        </Border>
 
-            </Grid>
-
-        </Grid>
-        
     </Grid>
     
 </Window>
