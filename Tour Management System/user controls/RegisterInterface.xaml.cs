@@ -20,6 +20,12 @@ namespace Tour_Management_System.user_controls
             _mainWindow = mainWindow;
         }
 
+        private void EnableRegisterButton()
+        {
+            bool passRules = checkSymbols.IsMatch(PbPassword.Password) && checkNumbers.IsMatch(PbPassword.Password) && PbPassword.Password.Length >= 5;
+            BttnRegister.IsEnabled = (passRules) && CbTermsCondition.IsChecked == true;
+        }
+
         private void BttnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             _mainWindow.SwitchUserControl(new LoginInterface(_mainWindow));
@@ -38,7 +44,7 @@ namespace Tour_Management_System.user_controls
 
         private void CbTermsCondition_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
-            BttnRegister.IsEnabled = true;
+            EnableRegisterButton();
         }
 
         private void CbTermsCondition_Unchecked(object sender, System.Windows.RoutedEventArgs e)
@@ -196,6 +202,8 @@ namespace Tour_Management_System.user_controls
             {
                 TbPassRule03.Foreground = (Brush)new BrushConverter().ConvertFrom("#a6a6a6");
             }
+
+            EnableRegisterButton();
         }
 
         //Reset Pin

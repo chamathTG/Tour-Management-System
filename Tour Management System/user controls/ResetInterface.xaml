@@ -191,7 +191,7 @@
             <TextBlock Grid.Column="1"
                            Text="* Make sure to set a new Strong password."
                            FontSize="12"
-                           Foreground="#a6a6a6"
+                           Foreground="#737373"
                            FontFamily="pack://application:,,,/assets/fonts/#Host Grotesk"
                            VerticalAlignment="Bottom"/>
 
