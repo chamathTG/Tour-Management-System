@@ -12,17 +12,20 @@ namespace Tour_Management_System.windows
             GridLoginWindowLeft.Children.Add(new LoginInterface(this));
         }
 
+        //User Control Changing
         public void SwitchUserControl(UserControl newControl)
         {
             GridLoginWindowLeft.Children.Clear();
             GridLoginWindowLeft.Children.Add(newControl);
         }
 
+        //Close Button
         private void BttnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        //Minimize Button
         private void BttnMinimize_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.WindowState = WindowState.Minimized;
