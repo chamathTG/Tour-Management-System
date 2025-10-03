@@ -70,13 +70,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="user controls\LoginInterface.xaml.cs">
+    <Compile Include="user controls\Login\LoginInterface.xaml.cs">
       <DependentUpon>LoginInterface.xaml</DependentUpon>
     </Compile>
-    <Compile Include="user controls\RegisterInterface.xaml.cs">
+    <Compile Include="user controls\Login\RegisterInterface.xaml.cs">
       <DependentUpon>RegisterInterface.xaml</DependentUpon>
     </Compile>
-    <Compile Include="user controls\ResetInterface.xaml.cs">
+    <Compile Include="user controls\Login\ResetInterface.xaml.cs">
       <DependentUpon>ResetInterface.xaml</DependentUpon>
     </Compile>
     <Compile Include="windows\Admin.xaml.cs">
@@ -118,15 +118,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="user controls\LoginInterface.xaml">
+    <Page Include="user controls\Login\LoginInterface.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="user controls\RegisterInterface.xaml">
+    <Page Include="user controls\Login\RegisterInterface.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="user controls\ResetInterface.xaml">
+    <Page Include="user controls\Login\ResetInterface.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
